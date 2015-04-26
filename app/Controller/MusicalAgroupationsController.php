@@ -32,20 +32,8 @@ class MusicalAgroupationsController extends AppController {
 	}
 
 	public function add() {
-		$this->set('entities',$this->MusicalAgroupation->Entity->find('list',array(
-			'fields' => array(
-				'Entity.id',
-				'Entity.name'
-				)
-			)
-		));
-		$this->set('seats',$this->MusicalAgroupation->Seat->find('list',array(
-			'fields' => array(
-				'Seat.id',
-				'Seat.name'
-				)
-			)
-		));
+		$this->set('entities',_get_all_entities_in_list($this));
+		$this->set('seats',_get_all_seat_in_list($this));
 		if($this->request->is('post')) {
 			$this->MusicalAgroupation->create();
 			if($this->MusicalAgroupation->save($this->request->data)) {
@@ -57,8 +45,8 @@ class MusicalAgroupationsController extends AppController {
 	}
 
 	public function edit($id = null) {
-		$this->set('entities',_get_all_entities_in_list());
-		$this->set('seats',_get_all_seat_in_list());
+		$this->set('entities',_get_all_entities_in_list($this));
+		$this->set('seats',_get_all_seat_in_list($this));
 		if(!$id) {
 			#throw new NotFoundException(__('Usuario Invalido'));
 		}
@@ -86,18 +74,18 @@ class MusicalAgroupationsController extends AppController {
 }
 }
 
-	function _get_all_seat_in_list() {
+	function _get_all_seat_in_list($object) {
 		$seats;
-		$seats = $this->MusicalAgroupation->Seat->find('list',array(
+		$seats = $object->MusicalAgroupation->Seat->find('list',array(
 			'fields' =>array('id','name')
 			)
 		);
 		return $seats; 
 	}
 
-	function _get_all_entities_in_list() {
+	function _get_all_entities_in_list($object) {
 		$entities;
-		$entities = $this->MusicalAgroupation->Entity->find('list',array(
+		$entities = $object->MusicalAgroupation->Entity->find('list',array(
 			'fields' => array('id','name')
 			)
 		);
