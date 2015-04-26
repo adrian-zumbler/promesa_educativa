@@ -1,32 +1,4 @@
-<section class="Menu">
-	<nav class="Menu-container">
-		<ul class="Menu-list">
-			<li class="Menu-option">
-					<?php
-						 echo $this->Html->link(
-							'Agrupaciones Musicales',
-							'/SEWA/agroupations/view/',
-							array(
-								'class' =>'Menu-link"'
-								)
-						);
-					?>
-			</li>
-			<li class="Menu-option">
-					<?php
-						 echo $this->Html->link(
-							'Inscritos',
-							'/SEWA/participants/view/',
-							array(
-								'class' =>'Menu-link"'
-								)
-						);
-					?>
-			</li>
-		
-		</ul>
-	</nav>
-</section>
+
 <?php
 	#print_r($datos);
 ?>
