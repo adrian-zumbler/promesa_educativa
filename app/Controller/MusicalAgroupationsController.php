@@ -57,13 +57,8 @@ class MusicalAgroupationsController extends AppController {
 	}
 
 	public function edit($id = null) {
-		$this->set('entities',$this->MusicalAgroupation->Entity->find('list',array(
-				'fields' => array('id', 'name')
-				)
-			)
-			);
+		$this->set('entities',_get_all_entities_in_list());
 		$this->set('seats',_get_all_seat_in_list());
-
 		if(!$id) {
 			#throw new NotFoundException(__('Usuario Invalido'));
 		}
@@ -98,4 +93,13 @@ class MusicalAgroupationsController extends AppController {
 			)
 		);
 		return $seats; 
+	}
+
+	function _get_all_entities_in_list() {
+		$entities;
+		$entities = $this->MusicalAgroupation->Entity->find('list',array(
+			'fields' => array('id','name')
+			)
+		);
+		return $entities;
 	}
