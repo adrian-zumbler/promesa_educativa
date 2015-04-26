@@ -62,11 +62,7 @@ class MusicalAgroupationsController extends AppController {
 				)
 			)
 			);
-		$this->set('seats',$this->MusicalAgroupation->Seat->find('list',array(
-				'fields' => array('id', 'name')
-				)
-			)
-			);
+		$this->set('seats',_get_all_seat_in_list());
 
 		if(!$id) {
 			#throw new NotFoundException(__('Usuario Invalido'));
@@ -94,3 +90,12 @@ class MusicalAgroupationsController extends AppController {
     }
 }
 }
+
+	function _get_all_seat_in_list() {
+		$seats;
+		$seats = $this->MusicalAgroupation->Seat->find('list',array(
+			'fields' =>array('id','name')
+			)
+		);
+		return $seats; 
+	}
