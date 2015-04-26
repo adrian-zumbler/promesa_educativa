@@ -37,32 +37,32 @@
 			</td>
 			<td class="Table-titleContainer">
 				<span class="Table-title">
-					Horario de labores
+					Horario
 				</span>
 			</td>
 			<td class="Table-titleContainer">
 				<span class="Table-title">
-					Tiempo en la agrupación
+					Antigüedad
 				</span>
 			</td>
 			<td class="Table-titleContainer">
 				<span class="Table-title">
-					Horas de trabajo diarias
+					Horas
 				</span>
 			</td>
 			<td class="Table-titleContainer">
 				<span class="Table-title">
-					Dias de trabajo de la semana
+					Dias laborales
 				</span>
 			</td>
 			<td class="Table-titleContainer">
 				<span class="Table-title">
-					Frecuencia de presentaciones
+					Frecuencia
 				</span>
 			</td>
 			<td class="Table-titleContainer large">
 				<span class="Table-title">
-					Numero de integrantes
+					Integrantes
 				</span>
 			</td>
 			<td class="Table-titleContainer">
