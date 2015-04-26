@@ -1,5 +1,10 @@
-global_green = rgb(192,214,47)
-grey =#E6E6E6
+global_green = #87d37c
+porcelain = #eaeaea
+casablanca = #f3b350
+rosa = #af333c
+gris = #353535
+
+
 
 .small
 	width 60px
@@ -33,27 +38,50 @@ grey =#E6E6E6
 .SideMenu
 	width 15%
 	float right
-.SideMenu ul
-	list-style none
+	background-color porcelain
+	ul
+		list-style none
+		a
+			color gris
+			text-decoration none
+			&:hover
+				color global_green
+			&:selected
+				color global_green
 
 /* Login route*/
 		
 .Login
 	
 	&-form
-		background grey
+		background porcelain
 		border-radius 6px
-		margin 2em auto
+		margin 7em auto 
+		margin-left 38%
 		padding 3em
 		width 500px
 	&-formInput
 		width 400px
 		label 
-			width 25%
+			width 28%
+			color global_green
+			font-size 1.1em
 		input 
 			border-radius 6px
-			border 1px solid grey
+			border 1px solid porcelain
 			padding-left 0.4em
+			width 72%
+
+.Btn 
+	background-color casablanca
+	border none
+	color white
+	border-radius 8px
+	width 100%
+	background-color rosa
+	
+/*Tablas*/
+			
 
 
 					

@@ -68,10 +68,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			 ?>
 		<aside class="SideMenu">
 			<ul>
-				<li>Agrupaciones Musicales</li>
-				<li>Inscritos</li>
-				<li>Maestros</li>
-				<li>Instrumentos</li>
+				<li><a href="">Agrupaciones</a></li>
+				<li><a href="">Inscritos</a></li>
+				<li><a href="">Maestros</a></li>
+				<li><a href="">Instrumentos</a></li>
 			</ul>
 		</aside>
 		<?php } ?>

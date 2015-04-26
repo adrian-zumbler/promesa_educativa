@@ -3,7 +3,7 @@
 		<?php
 			$optionsButton = array(
 				'label'=> 'Entrar',
-				'class'=> 'btn btn-lg btn-primary',
+				'class'=> 'Btn',
 				'div' => false
 				);
 			echo $this->Form->create('User',array('action' => 'login'));
