@@ -42,7 +42,18 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div class="Header">
-			<h2 class="Header-title">Intranet</h2>
+			 <div class="Header-nav">
+			 	<?php 
+				if(AuthComponent::user('group_id') == 1) {
+			 ?>
+			 	<a href="/promesa_educativa/users/register">Registrar</a> <?php } ?>
+			 	<?php 
+				if(AuthComponent::user('id')) {
+			 ?>
+			<a href="/promesa_educativa/users/logout">Cerrar Sesión</a>
+			<?php } ?>
+			 </div>
+			  
 			<section class="Logo">
 				<figure class="Logo-imageContainer">
 					<?php echo $this->Html->image('promesa_educativa_logo.png',array(
@@ -51,9 +62,19 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					?>
 				</figure>
 			</section>
-
 		</div>
-		
+		<?php 
+				if(AuthComponent::user('id')) {
+			 ?>
+		<aside class="SideMenu">
+			<ul>
+				<li>Agrupaciones Musicales</li>
+				<li>Inscritos</li>
+				<li>Maestros</li>
+				<li>Instrumentos</li>
+			</ul>
+		</aside>
+		<?php } ?>
 		<div id="content">
 
 			
